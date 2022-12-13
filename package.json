@@ -1,0 +1,30 @@
+{
+    "name": "nativenavigation",
+    "widgetName": "NativeNavigation",
+    "version": "1.0.0",
+    "description": "Custom navigation widget",
+    "copyright": "2022 Incentro",
+    "author": "Rob Duits",
+    "engines": {
+        "node": ">=16"
+    },
+    "license": "MIT",
+    "config": {
+        "projectPath": "../../"
+    },
+    "packagePath": "incentro",
+    "scripts": {
+        "start": "pluggable-widgets-tools start:native",
+        "build": "pluggable-widgets-tools build:native",
+        "lint": "pluggable-widgets-tools lint",
+        "lint:fix": "pluggable-widgets-tools lint:fix",
+        "prerelease": "npm run lint",
+        "release": "pluggable-widgets-tools release:native"
+    },
+    "devDependencies": {
+        "@mendix/pluggable-widgets-tools": "^9.18.0"
+    },
+    "dependencies": {
+        "big.js": "^6.2.1"
+    }
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="incentro.nativenavigation.NativeNavigation" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Native"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Native Navigation</name>
+    <description>Custom navigation widget</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="navList" type="object" isList="true">
+                <caption>Navigation list</caption>
+                <description/>
+                <properties>
+                    <propertyGroup caption="Object list group">
+                        <property key="caption" type="textTemplate">
+                            <caption>Caption</caption>
+                            <description>Navigation caption</description>
+                        </property>
+                        <property key="buttonAction" type="action">
+                            <caption>On click</caption>
+                            <description>Action to be performed when button is clicked</description>
+                        </property>
+                        <property key="icon" type="image" required="true">
+                            <caption>Icon</caption>
+                            <description>Navigation icon. Does not support .SVG (yet). The icon has a size of 20 by default. Best is to use a .png of at least x2 or even x3.</description>
+                        </property>
+                        <property key="conditionalVisible" type="expression" required="false">
+                            <caption>Conditional visible</caption>
+                            <description>Boolean state to have this nav item be shown/hidden.</description>
+                            <returnType type="Boolean" />
+                        </property>
+                    </propertyGroup>
+                </properties>
+            </property>
+            <property key="colorSelected" type="expression" defaultValue="'#BADA55'">
+                <caption>Selected color</caption>
+                <description>The current selected nav color.</description>
+                <returnType type="String" />
+            </property>
+            <property key="selectedItem" type="attribute" required="true">
+                <caption>Selected Nav item</caption>
+                <description>Keep track of the current selected item along pages.</description>
+                <attributeTypes>
+                    <attributeType name="Integer"/>
+                </attributeTypes>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
