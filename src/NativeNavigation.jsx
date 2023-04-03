@@ -7,10 +7,12 @@ import { mergeNativeStyles } from "@mendix/pluggable-widgets-tools";
 const defaultStyle = {
     container: {
         alignItems: "center",
+        backgroundColor: "white",
         flexDirection: "row",
         justifyContent: "space-between",
         borderTopWidth: 0.5,
-        borderTopColor: "#a7a6a8"
+        borderTopColor: "#a7a6a8",
+        zIndex: 2
     },
     button: {
         alignItems: "center",
